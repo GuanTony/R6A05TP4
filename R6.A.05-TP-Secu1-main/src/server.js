@@ -7,7 +7,7 @@ import { dirname, join } from 'path';
 const port = 3000;
 const authenticate = {realm: 'Westeros'};
 
-// Convertir import.meta.url en chemin de dossier
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
