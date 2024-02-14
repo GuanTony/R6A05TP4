@@ -1,8 +1,9 @@
 import Fastify from "fastify";
 import fastifyBasicAuth from "@fastify/basic-auth";
 import fs from 'fs/promises';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import {dirname, join} from 'path';
+import {fileURLToPath} from 'url';
+
 
 const port = 3000;
 const authenticate = {realm: 'Westeros'};
