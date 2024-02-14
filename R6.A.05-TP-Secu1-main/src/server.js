@@ -35,6 +35,15 @@ fastify.after(() => {
             }
         }
     })
+    fastify.route({
+        method: 'GET',
+        url: '/autre',
+        handler : async (req, reply) => {
+            return{
+                replique : 'Route sans mdp ouvert à tous !'
+            }
+        }
+        })
 })
 
 fastify.setErrorHandler(function (err, req, reply) {
