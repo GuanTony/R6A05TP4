@@ -5,7 +5,7 @@ import fs from "fs"
 
 const port = 3000;
 const authenticate = {realm: 'Westeros'}
-const path = 
+const path = "E:/Cours/TP/TP4/R6A05TP4/R6A05TP4/R6.A.05-TP-Secu1-main/src/https"
 
 const fastify = Fastify({
     logger: true
@@ -17,14 +17,11 @@ const httpsOptions = {
     cert: fs.readFileSync(path.join(__dirname, 'https', 'fastify.cert'))
 }
 
-const fastify = Fastify({
-    logger: true
-})
 
 fastify.register(fastifyHttps, {
     httpPort: 3000
 })
-}
+
 fastify.register(fastifyBasicAuth, {
     validate,
     authenticate
