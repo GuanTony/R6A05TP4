@@ -1,8 +1,10 @@
 export const getAuthHandler = function (req, rep) {
 
-    // Il faut mettre des trucs ici...
-
-    return rep.send("Il faut mettre des trucs avant")
+    const token = req.headers.authorization.split(' ')[1]
+    if (token) {
+        return rep.send({message: "Authentification réussie"})
+    }
+    
 }
 
 export const getHomeHandler = (req, res) => {
